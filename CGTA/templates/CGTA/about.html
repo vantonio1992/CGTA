@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>CGTA Information Page</title>
+		<style>
+			img {
+			max-width: 100%;
+			max-height: 100%;
+		   }
+		</style>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    </head>
+
+	
+	<body>
+		<nav class="navbar navbar-inverse" background-color = "blue">
+			<div class="container-fluid">
+				<div class="navbar-header">
+				<a class="navbar-brand" href="{% url 'upload' %}">Cancer Genome Technical Assist</a>
+				</div>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="{% url 'upload' %}">Upload</a></li>
+					<li class = "active"><a href="{% url 'about' %}">About</a></li>
+					<li><a href="{% url 'docs' %}">Docs</a></li>
+				</ul>
+			</div>
+		</nav>
+		
+		<div class = "container">
+		<h1>About CGTA</h1>
+			<img src={% static 'CGTA/images/poster.jpg' %} alt="poster" max-height = 100%, max-width = 100%>
+		</div>
+	</body>
+</html>
